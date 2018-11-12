@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,13 +13,68 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Element_Quiz_v0_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="g7M-5l-ajo">
+                                <rect key="frame" x="117.66666666666669" y="252.33333333333334" width="140" height="307.33333333333326"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="fC4-ml-jEB">
+                                        <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pC6-4j-Scd">
+                                                <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="7sj-tp-Qj9"/>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="140" id="9Nt-wA-fOs"/>
+                                                    <constraint firstAttribute="width" constant="140" id="GLh-ZI-l6C"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="140" id="hHu-oK-thY"/>
+                                                    <constraint firstAttribute="height" constant="140" id="kEl-B9-Egl"/>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="140" id="vkh-zL-suv"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="pC6-4j-Scd" firstAttribute="centerY" secondItem="fC4-ml-jEB" secondAttribute="centerY" id="2bc-eC-JMJ"/>
+                                            <constraint firstItem="pC6-4j-Scd" firstAttribute="centerX" secondItem="fC4-ml-jEB" secondAttribute="centerX" id="eYE-0c-JC0"/>
+                                        </constraints>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="azU-Ty-HQ2">
+                                        <rect key="frame" x="48.999999999999986" y="168.99999999999997" width="41.666666666666671" height="20.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EYX-ut-DKh">
+                                        <rect key="frame" x="29.999999999999986" y="218.33333333333334" width="80" height="30"/>
+                                        <state key="normal" title="Show name"/>
+                                        <connections>
+                                            <action selector="showAns:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fy1-Vi-Nss"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AGI-Oz-3L7">
+                                        <rect key="frame" x="54.999999999999986" y="277.33333333333326" width="30" height="30"/>
+                                        <state key="normal" title="next"/>
+                                        <connections>
+                                            <action selector="nextToElement:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cj2-pj-LO9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="g7M-5l-ajo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Znc-nl-2yI"/>
+                            <constraint firstItem="g7M-5l-ajo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jbm-b5-MhY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="ansLabel" destination="azU-Ty-HQ2" id="OTN-7P-ICc"/>
+                        <outlet property="imgView" destination="pC6-4j-Scd" id="4Gb-PR-qef"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
